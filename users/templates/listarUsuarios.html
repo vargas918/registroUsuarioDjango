@@ -1,0 +1,16 @@
+{% for persona in personas %}
+<h3>{{persona.name}}</h3>
+<p>Cedula: {{persona.cedula}}</p>
+<p>Telefono: {{persona.telefono}}</p>
+<p>Email: {{persona.email}}</p>
+{% if persona.estado == 'activo' %}
+    <p style="color:green">Activo</p>
+{% endif%}
+{% if persona.estado == 'inactivo' %}
+    <p style="color:red">Inactivo</p>
+{% endif%}
+
+<br>
+{% endfor %}
+
+<a href="registrar/">Crear nuevo</a>
